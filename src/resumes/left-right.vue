@@ -152,6 +152,10 @@ export default Vue.component(name, getVueOptions(name));
       background-repeat: none;
       background-position: center;
       background-size: cover;
+
+      /* styles for my current photo */
+      background-size: 180%;
+      background-position: 47% 55%;
     }
   }
   .contact {
