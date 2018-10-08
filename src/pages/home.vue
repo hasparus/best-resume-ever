@@ -7,14 +7,6 @@
   <h3 class="title">best-resume-ever</h3>
   <div class="previews">
     <div class="preview">
-      <router-link v-bind:to="'/resume/material-dark'">
-        <div class="preview-wrapper">
-          <img src="../assets/preview/resume-material-dark.png" />
-          <span>material-dark</span>
-        </div>
-      </router-link>
-    </div>
-    <div class="preview">
       <router-link v-bind:to="'/resume/left-right'">
         <div class="preview-wrapper">
           <img src="../assets/preview/resume-left-right.png" />
@@ -35,14 +27,6 @@
         <div class="preview-wrapper">
           <img src="../assets/preview/resume-side-bar.png" />
           <span>side-bar</span>
-        </div>
-      </router-link>
-    </div>
-    <div class="preview">
-      <router-link v-bind:to="'/resume/purple'">
-        <div class="preview-wrapper">
-          <img src="../assets/preview/resume-purple.png" />
-          <span>purple</span>
         </div>
       </router-link>
     </div>
@@ -85,7 +69,7 @@
 <script>
 import Vue from 'vue';
 export default Vue.component('resume', {
-    name: 'app'
+  name: 'app',
 });
 </script>
 
@@ -128,7 +112,8 @@ export default Vue.component('resume', {
   margin-left: 1.5%;
   margin-right: 1.5%;
   margin-bottom: 1.5%;
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12),
+    0 3px 1px -2px rgba(0, 0, 0, 0.2);
   height: 252px;
   overflow: hidden;
 }

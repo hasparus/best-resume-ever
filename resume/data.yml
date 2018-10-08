@@ -1,70 +1,58 @@
 /* #*/ export const PERSON = `
 name:
-  first: John
+  first: Piotr
   middle:
-  last: Doe
+  last: Pietrzak
 about: Hi, my name is John Doe. I"m just about the most boring type of person you could
        possibly imagine. I like collecting leaves from the tree in my back yard and documenting
        each time I eat a peanut that is non-uniform. I am not a robot. Please hire me.
 position: Software Developer
 
 birth:
-  year: 1990
-  location: New York
+  year: 1995
+  location: Łódź
 
 experience:
-- company: Company A
-  position: Developer
-  timeperiod: since January 2016
-  description: Programming and watching cute cat videos.
-  website: https://example.com
-
-- company: Company B
-  position: Frontend Developer
-  timeperiod: January 2015 - December 2015
-  description: Fulfillment of extremely important tasks.
-
-- company: Company C
-  position: Trainee
-  timeperiod: March 2014 - December 2014
-  description: Making coffee and baking cookies.
+- company: Explain Everything
+  position: JavaScript Developer
+  timeperiod: July 2017 - October 2018
+  description: Transformed large codebase from JQuery and decaffeinated CoffeeScript through Flow to TypeScript and React. 
+               Worked on P2P graphics editor using three.js
+  website: https://whiteboard.explaineverything.com/
 
 education:
-- degree: Master of Arts
-  timeperiod: March 2012 - December 2013
-  description: Major in Hacking and Computer Penetration, University A, New York, USA.
-  website: https://example.com
-
 - degree: Bachelor of Science
-  timeperiod: March 2009 - December 2011
-  description: Major in Engineering, University B, Los Angeles, USA.
+  timeperiod: since 2015
+  description: Institute of Computer Science, University of Wrocław, Wrocław.
 
 # skill level goes 0 to 100
 skills:
-- name: HTML5
-  level: 99
-- name: CSS3
+- name: TypeScript
+  level: 92
+- name: React
   level: 95
 - name: JavaScript
-  level: 97
-- name: Node.js
-  level: 93
-- name: Angular 2
-  level: 60
-- name: TypeScript
+  level: 82
+- name: CSS
+  level: 75
+- name: Soft. Eng.
+  level: 75
+- name: Redux
   level: 80
-- name: ES.Next
-  level: 70
+- name: Node.js
+  level: 71
+- name: PostgreSQL
+  level: 50
 - name: Docker
-  level: 99
-knowledge: Also proficient in Adobe Photoshop and Illustrator, grew up bilingual
-  (English and Klingon).
+  level: 20
+knowledge: Also proficient in Figma, FramerX.\n 
+           Good command of English.
 
-projects:
-- name: best-resume-ever
-  platform: Vue
-  description: 👔 💼 Build fast 🚀 and easy multiple beautiful resumes and create your best CV ever! Made with Vue and LESS.
-  url: https://github.com/salomonelli/best-resume-ever
+# projects:
+# - name: best-resume-ever
+#   platform: Vue
+#   description: 👔 💼 Build fast 🚀 and easy multiple beautiful resumes and create your best CV ever! Made with Vue and LESS.
+#   url: https://github.com/salomonelli/best-resume-ever
 
 hobbies:
 - name: Video Games
@@ -76,17 +64,16 @@ hobbies:
   url: https://example.com
 
 contributions:
-- name: best-resume-ever
-  description: 👔 💼 Build fast 🚀 and easy multiple beautiful resumes.
-  url: https://github.com/salomonelli/best-resume-ever
-
+- name: DefinitelyTyped
+  description: The repository for high quality TypeScript type definitions.
+  url: https://github.com/DefinitelyTyped/DefinitelyTyped
+  
 contact:
-  email: john.doe@email.com
-  phone: 0123 456789
-  street: 1234 Broadway
-  city: New York
-  website: johndoe.com
-  github: johnyD
+  email: hasparus@gmail.com
+  phone: +48 668395783
+  street: Dąbrowskiego 40 
+  city: Wrocław
+  github: hasparus
 # en, de, fr, pt, ca, cn, it, es, th, pt-br, ru, sv, id, hu, pl, ja, ka, nl, he, zh-tw, lt, ko, el
 lang: en
 `

@@ -33,7 +33,7 @@
           <td><i class="fa fa-phone" aria-hidden="true"></i></td>
         </tr>
         <tr>
-          <td>{{person.contact.street}} <br> {{person.contact.city}}</td>
+          <td>{{person.contact.street}}<br>{{person.contact.city}}</td>
           <td><i class="fa fa-home" aria-hidden="true"></i></td>
         </tr>
         <tr v-if="person.contact.website">
@@ -52,6 +52,7 @@
       <h3>{{ lang.education }}</h3>
       <div class="education-block" v-for="education in person.education" :key="education.degree">
         <span class="degree">{{education.degree}}</span>
+        <div>{{education.timeperiod}}</div>
         <span class="degree-description">{{education.description}}</span>
       </div>
     </div>
@@ -64,7 +65,7 @@
         </div>
       </div>
     </div>
-    <span class="skills-other"> {{person.knowledge}} </span>
+    <span class="skills-other">{{person.knowledge}}</span>
   </div>
 </div>
 </template>
@@ -80,142 +81,148 @@ export default Vue.component(name, getVueOptions(name));
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="less" scoped>
 #resume1 {
-  font-family:'Source Sans Pro', sans-serif;
-  font-size:20px;
-  padding-bottom:50px;
-  a, a:focus, a:hover, a:visited {
-    color:#616161;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 20px;
+  padding-bottom: 50px;
+  a,
+  a:focus,
+  a:hover,
+  a:visited {
+    color: #616161;
   }
   h3 {
-    margin-bottom:0;
+    margin-bottom: 0;
   }
   span {
-    display:inline-block;
+    display: inline-block;
   }
   .row {
-    width:100%;
+    width: 100%;
   }
   .half {
-    width:44%;
+    width: 44%;
   }
   .half.left {
-    float:left;
-    text-align:right;
-    padding-left:4%;
-    padding-right:2%;
+    float: left;
+    text-align: right;
+    padding-left: 4%;
+    padding-right: 2%;
   }
   .half.right {
-    float:right;
-    text-align:left;
-    padding-right:4%;
-    padding-left:2%;
+    float: right;
+    text-align: left;
+    padding-right: 4%;
+    padding-left: 2%;
   }
   .center {
-    margin-left:auto;
-    margin-right:auto;
+    margin-left: auto;
+    margin-right: auto;
   }
   .text-center {
-    text-align:center;
+    text-align: center;
   }
   .name {
-    border:1px solid black;
-    text-transform:uppercase;
-    padding:10px 20px;
-    margin-top:80px;
-    margin-bottom:5px;
-    font-family:'Open Sans', sans-serif;
-    font-size:35px;
-    font-weight:600;
-    letter-spacing:10px;
+    border: 1px solid black;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    margin-top: 80px;
+    margin-bottom: 5px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 35px;
+    font-weight: 600;
+    letter-spacing: 10px;
   }
   .position {
-    text-transform:uppercase;
-    font-family:'Open Sans', sans-serif;
-    font-size:smaller;
-    color:#757575;
-    margin-bottom:40px;
+    text-transform: uppercase;
+    font-family: 'Open Sans', sans-serif;
+    font-size: smaller;
+    color: #757575;
+    margin-bottom: 40px;
   }
   .image {
-    width:100px;
-    height:100px;
-    margin-top:50px;
-    margin-bottom:50px;
+    width: 100px;
+    height: 100px;
+    margin-top: 50px;
+    margin-bottom: 50px;
     .img {
-      width:100%;
-      height:100%;
-      border-radius:50%;
-      background-image:url('../../resume/id.jpg');
-      background-repeat:none;
-      background-position:center;
-      background-size:cover;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background-image: url('../../resume/id.jpg');
+      background-repeat: none;
+      background-position: center;
+      background-size: cover;
     }
   }
   .contact {
-    width:100%;
+    width: 100%;
     table {
-      text-align:right;
-      float:right;
-      margin-top:5px;
-      color:#616161;
-      font-size:20px;
+      text-align: right;
+      float: right;
+      margin-top: 5px;
+      color: #616161;
+      font-size: 20px;
       i {
-        padding:2px;
-        color:#616161;
+        padding: 2px;
+        color: #616161;
       }
       tr td:nth-child(2) {
-        vertical-align:top;
+        vertical-align: top;
       }
     }
   }
   .experience .experience-block span {
-    width:100%;
-    color:#616161;
+    width: 100%;
+    color: #616161;
   }
   .experience .experience-block span.company {
-    font-weight:bold;
-    padding-bottom:5px;
-    padding-top:10px;
-    color:#424242;
+    font-weight: bold;
+    padding-bottom: 5px;
+    padding-top: 10px;
+    color: #424242;
   }
   .experience .experience-block span.job-title {
-    font-style:italic;
+    font-style: italic;
   }
-  .education-block span {
-    color:#616161;
+  .education-block span,
+  .education-block div {
+    color: #616161;
   }
   .education-block span.degree {
-    font-weight:bold;
-    padding-bottom:5px;
-    padding-top:10px;
-    color:#424242;
+    font-weight: bold;
+    padding-bottom: 5px;
+    padding-top: 10px;
+    color: #424242;
   }
   .skills-other {
-    color:#616161;
-    margin-bottom:10px;
+    color: #616161;
+    margin-bottom: 10px;
+    white-space: pre;
   }
   .skills {
-    margin-top:20px;
-    margin-bottom:10px;
+    margin-top: 20px;
+    margin-bottom: 10px;
     .skill-block {
-      padding-bottom:10px;
-      display:inline-block;
+      padding-bottom: 10px;
+      display: inline-flex;
+      flex-direction: row;
+      align-items: center;
       .skill {
-        width:100px;
-        color:#616161;
-        float:left;
+        width: 100px;
+        color: #616161;
+        float: left;
       }
       .skill-bar {
-        float:right;
-        background:#e0e0e0;
-        overflow:hidden;
-        height:8px;
-        border-radius:3px;
-        margin-top:6.5px;
-        position:relative;
-        width:249px;
+        float: right;
+        background: #e0e0e0;
+        overflow: hidden;
+        height: 8px;
+        border-radius: 3px;
+        position: relative;
+        width: 249px;
         .level {
-          background:#757575;
-          height:100%;
+          background: #757575;
+          height: 100%;
         }
       }
     }
