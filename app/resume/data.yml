@@ -1,0 +1,80 @@
+/* #*/ export const PERSON = `
+name:
+  first: Piotr
+  middle:
+  last: Pietrzak
+about: Hi, my name is John Doe. I"m just about the most boring type of person you could
+       possibly imagine. I like collecting leaves from the tree in my back yard and documenting
+       each time I eat a peanut that is non-uniform. I am not a robot. Please hire me.
+position: Software Developer
+
+birth:
+  year: 1995
+  location: Łódź
+
+experience:
+- company: Explain Everything
+  position: JavaScript Developer
+  timeperiod: July 2017 - October 2018
+  description: Transformed large codebase from JQuery and decaffeinated CoffeeScript through Flow to TypeScript and React. 
+               Worked on P2P graphics editor using three.js
+  website: https://whiteboard.explaineverything.com/
+
+education:
+- degree: Bachelor of Science
+  timeperiod: since 2015
+  description: Institute of Computer Science, University of Wrocław, Wrocław.
+
+# skill level goes 0 to 100
+skills:
+- name: TypeScript
+  level: 92
+- name: React
+  level: 95
+- name: JavaScript
+  level: 82
+- name: CSS
+  level: 75
+- name: Soft. Eng.
+  level: 75
+- name: Redux
+  level: 80
+- name: Node.js
+  level: 71
+- name: PostgreSQL
+  level: 50
+- name: Docker
+  level: 20
+knowledge: Also proficient in Figma, FramerX.\n 
+           Good command of English.\n
+           Organizer of Wrocław TypeScript Meetup.
+
+# projects:
+# - name: best-resume-ever
+#   platform: Vue
+#   description: 👔 💼 Build fast 🚀 and easy multiple beautiful resumes and create your best CV ever! Made with Vue and LESS.
+#   url: https://github.com/salomonelli/best-resume-ever
+
+hobbies:
+- name: Video Games
+  iconClass: fa fa-gamepad
+  url: https://example.com
+
+- name: Drawing
+  iconClass: fa fa-pencil
+  url: https://example.com
+
+contributions:
+- name: DefinitelyTyped
+  description: The repository for high quality TypeScript type definitions.
+  url: https://github.com/DefinitelyTyped/DefinitelyTyped
+  
+contact:
+  email: hasparus@gmail.com
+  phone: +48 668395783
+  street: Dąbrowskiego 40 
+  city: Wrocław
+  github: hasparus
+# en, de, fr, pt, ca, cn, it, es, th, pt-br, ru, sv, id, hu, pl, ja, ka, nl, he, zh-tw, lt, ko, el
+lang: en
+`
