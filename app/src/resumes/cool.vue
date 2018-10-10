@@ -193,7 +193,7 @@ export default Vue.component(name, getVueOptions(name));
 </script>
 
 <style lang="less" scoped>
-@accent-color: #34495E;
+@accent-color: #34495e;
 @banner-color: #42b883;
 @banner-height: 120px;
 @picture-size: 120px;
@@ -213,7 +213,7 @@ a {
 
 .resume {
   position: relative;
-  font-family:'Roboto' !important;
+  font-family: 'Roboto' !important;
   font-size: 0.9em;
 }
 
@@ -225,7 +225,7 @@ a {
   width: @picture-size;
   border-radius: 50%;
   border: 5px solid @accent-color;
-  content: url('../../resume/id.jpg');
+  content: url('../../../data/id.jpg');
   z-index: 2;
 }
 

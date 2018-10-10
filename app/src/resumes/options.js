@@ -1,23 +1,19 @@
 import yaml from 'js-yaml';
-import {
-  PERSON
-} from '../../resume/data.yml';
-import {
-  terms
-} from '../terms';
+import { PERSON } from '../../../data/data.yml';
+import { terms } from '../terms';
 
 // Called by templates to decrease redundancy
-function getVueOptions (name) {
+function getVueOptions(name) {
   const opt = {
     name: name,
-    data () {
+    data() {
       return {
         person: yaml.load(PERSON),
-        terms: terms
+        terms: terms,
       };
     },
     computed: {
-      lang () {
+      lang() {
         const defaultLang = this.terms.en;
         const useLang = this.terms[this.person.lang];
 
@@ -30,12 +26,10 @@ function getVueOptions (name) {
           });
 
         return useLang;
-      }
-    }
+      },
+    },
   };
   return opt;
 }
 
-export {
-  getVueOptions
-};
+export { getVueOptions };
