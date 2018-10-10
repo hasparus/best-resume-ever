@@ -1,5 +1,6 @@
 const { execSync } = require('child_process');
 const program = require('commander');
+const chalk = require('chalk');
 
 const interleave = (strings, ...interpolations) => {
   const result = [strings[0]];
@@ -16,7 +17,10 @@ const exec = (...args) => {
     .join('')
     .trim()
     .split('\n')
-    .map(x => execSync(x, { stdio: 'inherit' }));
+    .forEach(command => {
+      console.log(chalk.bold(`Running ${command}`));
+      execSync(command, { stdio: 'inherit' });
+    });
 };
 program
   .arguments('<pdfLocation>')
