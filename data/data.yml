@@ -15,15 +15,15 @@ birth:
 experience:
 - company: Explain Everything
   position: JavaScript Developer
-  timeperiod: July 2017 - October 2018
+  timeperiod: July 2017 – October 2018
   description: Transformed large codebase from JQuery and decaffeinated CoffeeScript through Flow to TypeScript and React. 
-               Worked on P2P graphics editor using three.js
+               Worked on P2P graphics editor using three.js.
   website: https://whiteboard.explaineverything.com/
 
 - company: Brighter3D
   position: Software Developer
   timeperiod: June 2017
-  description: Worked on NodeJS Google Cloud functions and C# GUI for experimental Unity3D app. 
+  description: Worked on Unity3D app with NodeJS Google Cloud functions and C#. 
   website: https://www.brighter3d.com/
 
 

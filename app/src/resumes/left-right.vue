@@ -82,6 +82,7 @@ export default Vue.component(name, getVueOptions(name));
 <style lang="less" scoped>
 #resume1 {
   font-family: 'Source Sans Pro', sans-serif;
+  line-height: 1.3;
   font-size: 20px;
   padding-bottom: 50px;
   a,
@@ -217,6 +218,7 @@ export default Vue.component(name, getVueOptions(name));
         float: left;
       }
       .skill-bar {
+        margin-top: 1px;
         float: right;
         background: #e0e0e0;
         overflow: hidden;
