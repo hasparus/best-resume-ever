@@ -24,7 +24,7 @@ const exec = (...args) => {
 };
 program
   .arguments('<pdfLocation>')
-  .option('-t, --tag <string>', 'string to use as lightweight tag')
+  .option('-t, --tag [string]', 'string to use as lightweight tag')
   .parse(process.argv);
 
 const [filePath] = program.args;
@@ -35,12 +35,14 @@ if (!filePath) {
     'filePath as first positional argument is required. Try `yarn choose -h`.'
   );
 }
-if (!tag) {
-  throw new Error('tag is missing. Try `yarn choose -h`.');
-}
 
 exec`
   cp ${filePath} ../resume.pdf
-  git tag ${tag}
-  git push origin ${tag}
 `;
+
+if (tag) {
+  exec`
+    git tag ${tag}
+    git push origin ${tag}
+  `;
+}

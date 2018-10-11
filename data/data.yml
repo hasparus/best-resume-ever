@@ -20,6 +20,13 @@ experience:
                Worked on P2P graphics editor using three.js
   website: https://whiteboard.explaineverything.com/
 
+- company: Brighter3D
+  position: Software Developer
+  timeperiod: June 2017
+  description: Worked on NodeJS Google Cloud functions and C# GUI for experimental Unity3D app. 
+  website: https://www.brighter3d.com/
+
+
 education:
 - degree: Bachelor of Science
   timeperiod: since 2015
